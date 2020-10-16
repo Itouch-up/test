@@ -1,8 +1,9 @@
-/*black clear*/
+/*reset*/
 *{
     margin: 0;
     padding: 0;
 }
+.clearfix::before, .clearfix::after{display: block; content: ''; clear: both;}
 /* layout */
 #wrap{
     width: 1200px;
@@ -10,23 +11,68 @@
     background: #ccc;
     margin: 0 auto;
 }
+/*header*/
 #header{
-    width: 100%;
-    height: 100px;
-    background: #111;
 }
+#header .logo{
+    width: 250px;
+    height: 100px;
+    background-color: aquamarine; 
+    float: left;
+}
+#header .nav{
+    width: 950px;
+    height: 100px;
+    background-color: aqua;
+    float: left;
+}
+/*banner*/
 #banner{
-    width: 100%;
     height: 300px;
     background: #1351;
 }
+/*contents*/
 #contents{
-    width: 100%;
-    height: 200px;
-    background: rosybrown;
 }
+/*> = 첫번째만 적용*/
+#contents > div{
+    float: left;
+    width: 400px;
+    height: 200px;
+}
+#contents .cont1{
+    background-color: cadetblue;
+}
+#contents .cont2{
+    background-color: blueviolet;
+}
+#contents .cont3{
+    background-color: paleturquoise;
+}
+/*footer*/
 #footer{
     width: 100%;
     height: 100px;
     background: sandybrown;
+}
+#footer > div{
+
+}
+#footer .foot1{
+    float: left;
+    width: 200px;
+    height: 100px;
+    background-color: skyblue;
+}
+#footer .foot2{
+    float: left;
+    width: 800px;
+    height: 100px;
+    background-color: turquoise;
+}
+#footer .foot3{
+    float: left;
+    width: 200px;
+    height: 100px;
+    background-color: steelblue;
 }
